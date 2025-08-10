@@ -1,0 +1,237 @@
+/* ===== ATS-Friendly Resume Styles ===========================================
+   Clean, modern styling that works with Applicant Tracking Systems
+   while maintaining visual appeal and readability.
+=========================================================================== */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main resume container */
+body {
+  font-family: "Palatino Linotype", "Palatino", "Georgia", serif;
+  font-size: 9pt;
+  line-height: 1.2;
+  color: #2c3e50;
+  background: #ffffff;
+  max-width: 8.5in;
+  margin: 0.125in auto;
+  padding: 0.375in;
+  border: 1px solid #ecf0f1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section */
+h1 {
+  font-size: 20pt;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 0.125in;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25in;
+}
+
+/* Job title - center below name, no block styling */
+h1 + p {
+  text-align: center;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 0.25in;
+  font-family: "Palatino Linotype", "Palatino", "Georgia", serif;
+}
+
+/* Contact information - no block styling */
+p:first-of-type {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 0.25in;
+  font-size: 8pt;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Section headers - no border lines */
+h2 {
+  font-size: 12pt;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 0.25in;
+  margin-bottom: 0.125in;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: "Palatino Linotype", "Palatino", "Georgia", serif;
+}
+
+/* Job titles */
+h3 {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #34495e;
+  margin-top: 0.25in;
+  margin-bottom: 0.125in;
+  font-family: "Palatino Linotype", "Palatino", "Georgia", serif;
+}
+
+/* Company and date info - no left border */
+h3 + p {
+  color: #7f8c8d;
+  font-size: 8pt;
+  font-style: italic;
+  margin-bottom: 0.25in;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 0.125in;
+  text-align: justify;
+}
+
+/* Lists */
+ul, ol {
+  margin: 0.125in 0;
+  padding-left: 0.375in;
+}
+
+li {
+  margin-bottom: 0.0625in;
+  line-height: 1.1;
+}
+
+li::marker {
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Skills section - no block styling */
+h2 + p {
+  margin: 0.125in 0;
+}
+
+/* Horizontal rules - removed all dividers */
+hr {
+  display: none;
+}
+
+/* Emphasis */
+em, strong {
+  color: inherit;
+  font-weight: bold;
+}
+
+/* Code */
+code {
+  font-family: "Consolas", "Monaco", monospace;
+  background: #f8f9fa;
+  border: 1px solid #ecf0f1;
+  border-radius: 2px;
+  padding: 1px 3px;
+  font-size: 0.9em;
+  color: #3498db;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.25in 0;
+  font-size: 8pt;
+}
+
+th, td {
+  border: 1px solid #ecf0f1;
+  padding: 0.125in;
+  text-align: left;
+}
+
+thead th {
+  background: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 0.25in 0;
+  padding: 0.125in;
+  border-left: 2px solid #3498db;
+  background: #f8f9fa;
+  color: #2c3e50;
+  font-style: italic;
+  border-radius: 2px;
+}
+
+/* Keywords section - no block styling */
+p:last-child {
+  margin-top: 0.25in;
+  font-size: 7pt;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+/* Print styles */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.125in;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    max-width: none;
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+    color: #7f8c8d;
+  }
+}
+
+/* Mobile optimization */
+@media (max-width: 680px) {
+  body {
+    margin: 0.0625in;
+    padding: 0.125in;
+    max-width: 100%;
+  }
+  
+  h1 {
+    font-size: 16pt;
+  }
+  
+  h2 {
+    font-size: 10pt;
+  }
+  
+  h3 {
+    font-size: 8pt;
+  }
+}
+
+/* Page break controls */
+h2, h3 {
+  page-break-after: avoid;
+}
+
+ul, ol {
+  page-break-inside: avoid;
+}
+  
