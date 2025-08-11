@@ -1,10 +1,12 @@
 # Bhagavathi Ravitej
 **Backend Developer**
 
-- bhagavathi.ravitej@gmail.com
-- (+47) 93 08 36 41
-- Ålesund 6015
-- [LinkedIn](https://www.linkedin.com/in/ravitej-bhagavathi/)
+<div class="contact">
+  <span>bhagavathi.ravitej@gmail.com</span>
+  <span>(+47) 93 08 36 41</span>
+  <span>Ålesund 6015</span>
+  <a href="https://www.linkedin.com/in/ravitej-bhagavathi/">LinkedIn</a>
+</div>
 
 ---
 
@@ -16,13 +18,16 @@ Java developer with 3 years’ experience delivering real-time motion simulation
 
 ## Skills
 
-- Java
-- C#
-- Python
-- JavaScript
-- Maven/Gradle
-- Docker
-- GitHub Actions
+<div class="skills-grid">
+  <span>Java</span>
+  <span>C#</span>
+  <span>Python</span>
+  <span>JavaScript</span>
+  <span>Maven/Gradle</span>
+  <span>Docker</span>
+  <span>GitHub Actions</span>
+  <span>CI/CD</span>
+</div>
 
 ---
 

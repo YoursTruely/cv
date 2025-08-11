@@ -222,3 +222,160 @@
   header.resume-header h1 { margin-bottom: var(--space-1); }
   header.resume-header .contact { margin-bottom: 0; }
   
+  .onepage {
+    --line: 1.4;
+    --space-1: .18rem;
+    --space-2: .35rem;
+    --space-3: .55rem;
+    --space-4: .8rem;
+    --space-5: 1rem;
+    --space-6: 1.1rem;
+  }
+  .onepage main, .onepage .markdown-body { padding: 1.4rem .9rem 1.6rem; }
+  .onepage h1 { font-size: 1.6rem; }
+  .onepage h2 { font-size: 1.05rem; }
+  .onepage h3 { font-size: .98rem; }
+  .onepage h4 { font-size: .9rem; }
+  .onepage .badges .badge, .onepage .badges li { font-size: .88rem; padding: .12rem .4rem; }
+  .onepage ul, .onepage ol { margin: 0 0 var(--space-2) 1rem; }
+  .onepage .role-line { gap: .35rem .5rem; }
+  .onepage table th, .onepage table td { padding: .35rem .45rem; }
+  
+  /* Print-first compaction */
+  @page { size: A4; margin: 1.2cm; } /* tighten from 1.6cm; switch to Letter if needed */
+  /* @page { size: Letter; margin: 0.6in; } */
+  
+  @media print {
+    html, body {
+      font-size: 9.6pt;       /* was 10.5pt */
+      line-height: 1.38;      /* denser lines */
+    }
+  
+    /* Scale down headings */
+    h1 { font-size: 1.55rem; margin-bottom: .25rem; }
+    h2 { font-size: 1.02rem; margin-top: .9rem; margin-bottom: .4rem; }
+    h3 { font-size: .96rem; margin-top: .6rem; margin-bottom: .25rem; }
+    h4 { font-size: .88rem; margin-top: .45rem; margin-bottom: .2rem; }
+  
+    /* Tighter blocks */
+    p { margin: 0 0 .4rem; }
+    ul, ol { margin: 0 0 .4rem 1rem; }
+    li { margin: 0 0 .25rem; }
+  
+    /* Allow breaking inside text so long bullets/paras don't force overflow */
+    p, ul, ol { page-break-inside: auto; break-inside: auto; }
+    /* Keep only truly blocky things together */
+    table, pre, header.resume-header { page-break-inside: avoid; }
+  
+    /* Compact badges/tags */
+    .badges { gap: .25rem .35rem; margin: .25rem 0 .4rem; }
+    .badges li, .badge {
+      font-size: .88rem;
+      padding: .12rem .38rem;
+      border-radius: .35rem;
+    }
+  
+    /* Compact contact row and header */
+    .contact { gap: .4rem .6rem; margin-bottom: .6rem; }
+    header.resume-header { margin-bottom: .8rem; padding-bottom: .5rem; border-bottom-width: 1px; }
+  
+    /* Code & tables smaller */
+    code, pre { font-size: .88rem; }
+    pre { padding: .5rem; }
+    th, td { padding: .35rem .45rem; }
+  
+    /* Let the layout use full width when printing */
+    main, .markdown-body { max-width: none; padding: 0; }
+  
+    /* Hyphenation helps squeeze lines a bit */
+    p, li { hyphens: auto; -webkit-hyphens: auto; }
+  }
+  
+  /* Micro trims that often save ~1–2 lines */
+  .role-line .meta { font-size: .9rem; }
+  .small, time, .meta { font-size: .9rem; }
+
+  /* ===== Compact print layout for 1-page resume ===== */
+
+@page { 
+  size: A4; 
+  margin: 1.2cm; /* tighter than 1.6cm */
+}
+
+@media print {
+  html, body {
+    font-size: 9.5pt; /* smaller text for compactness */
+    line-height: 1.38;
+  }
+
+  h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
+  h2 { font-size: 1.05rem; margin-top: 0.8rem; margin-bottom: 0.35rem; }
+  h3 { font-size: 0.95rem; margin-top: 0.5rem; margin-bottom: 0.2rem; }
+  h4 { font-size: 0.88rem; margin-top: 0.4rem; margin-bottom: 0.15rem; }
+
+  p { margin: 0 0 0.35rem; }
+  ul, ol { margin: 0 0 0.35rem 1rem; }
+  li { margin: 0 0 0.25rem; }
+
+  /* Let paragraphs and lists break to avoid large gaps */
+  p, ul, ol { page-break-inside: auto; break-inside: auto; }
+
+  /* Compact skill badges */
+  .badges { gap: 0.25rem 0.35rem; margin: 0.2rem 0 0.35rem; }
+  .badges li, .badge {
+    font-size: 0.88rem;
+    padding: 0.12rem 0.38rem;
+    border-radius: 0.35rem;
+  }
+
+  /* Reduce header spacing */
+  header.resume-header { 
+    margin-bottom: 0.8rem; 
+    padding-bottom: 0.5rem; 
+    border-bottom-width: 1px; 
+  }
+
+  .contact { gap: 0.4rem 0.6rem; margin-bottom: 0.6rem; }
+  .small, time, .meta { font-size: 0.9rem; }
+
+  /* Make full use of page width */
+  main, .markdown-body { 
+    max-width: none; 
+    padding: 0; 
+  }
+
+  /* Enable hyphenation for tighter wrapping */
+  p, li { hyphens: auto; -webkit-hyphens: auto; }
+}
+
+/* Contact section in horizontal row */
+.contact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+  gap: 0.6rem 1rem;
+  margin: 0 0 var(--space-5);
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+}
+.contact span, .contact a {
+  white-space: nowrap;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Skills grid: 2 rows × 4 columns */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.4rem 0.8rem;
+  margin: var(--space-2) 0 var(--space-3);
+}
+.skills-grid span {
+  display: inline-block;
+  border: 1px solid var(--rule);
+  padding: 0.18rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
