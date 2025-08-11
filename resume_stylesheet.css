@@ -6,346 +6,387 @@
    - Avoids icons, tables, text-in-images
    ============ */
 
-   :root{
-    --fg: #111;
-    --muted: #555;
-    --accent: #0B63F6;        /* tweak if you want */
-    --bg: #fff;
-    --rule: #E6E6E6;
-    --maxw: 820px;            /* readable width */
-    --line: 1.55;
-    --space-1: .25rem;
-    --space-2: .5rem;
-    --space-3: .75rem;
-    --space-4: 1rem;
-    --space-5: 1.25rem;
-    --space-6: 1.5rem;
-  }
-  
-  * { box-sizing: border-box; }
-  
-  html, body {
-    padding: 0;
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font: 400 11pt/var(--line) -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji",
-          "Segoe UI Emoji", "Segoe UI Symbol";
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
-  
-  /* Container (wrap your Markdown body in <main> if you can) */
-  main, .markdown-body {
-    max-width: var(--maxw);
-    margin: 0 auto;
-    padding: 2rem 1.2rem 3rem;
-  }
-  
-  /* Headings */
-  h1, h2, h3, h4 {
-    line-height: 1.25;
-    margin: 0;
-    font-weight: 700;
-  }
-  h1 {
-    font-size: 1.9rem;
-    letter-spacing: .2px;
-    margin-bottom: var(--space-2);
-  }
-  h2 {
-    font-size: 1.15rem;
-    text-transform: uppercase;
-    letter-spacing: .8px;
-    color: var(--muted);
-    margin-top: var(--space-6);
-    margin-bottom: var(--space-3);
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: var(--space-2);
-  }
-  h3 {
-    font-size: 1.05rem;
-    margin-top: var(--space-4);
-    margin-bottom: var(--space-1);
-  }
-  h4 {
-    font-size: .95rem;
-    margin-top: var(--space-3);
-    margin-bottom: var(--space-1);
-    color: var(--muted);
-  }
-  
-  /* Paragraphs & lists */
-  p {
-    margin: 0 0 var(--space-3);
-  }
-  ul, ol {
-    margin: 0 0 var(--space-3) 1.15rem;
-    padding: 0;
-  }
-  li { margin: 0 0 .4rem; }
-  li p { margin: 0; } /* compact bullets */
-  strong { font-weight: 700; }
-  em { font-style: italic; }
-  
-  /* Horizontal rule as subtle divider (Markdown ---) */
-  hr {
-    border: 0;
-    height: 1px;
-    background: var(--rule);
-    margin: var(--space-6) 0 var(--space-5);
-  }
-  
-  /* Links (kept simple; ATS ignores styling anyway) */
-  a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-  a:hover { text-decoration: underline; }
-  
-  /* Small, muted metadata (locations, dates) */
-  .small, time, .meta {
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-  
-  /* Blocks to keep together across pages (wrap sections in .section if possible) */
-  .section { break-inside: avoid; page-break-inside: avoid; }
-  
-  /* Job header lines commonly written in Markdown:
+:root {
+  --fg: #111;
+  --muted: #555;
+  --accent: #0b63f6; /* tweak if you want */
+  --bg: #fff;
+  --rule: #e6e6e6;
+  --maxw: 820px; /* readable width */
+  --line: 1.55;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font:
+    400 11pt / var(--line) -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    "Noto Sans",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Container (wrap your Markdown body in <main> if you can) */
+main,
+.markdown-body {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 1.2rem 3rem;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin: 0;
+  font-weight: 700;
+}
+h1 {
+  font-size: 1.9rem;
+  letter-spacing: 0.2px;
+  margin-bottom: var(--space-2);
+}
+h2 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: var(--space-2);
+}
+h3 {
+  font-size: 1.05rem;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-1);
+}
+h4 {
+  font-size: 0.95rem;
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-1);
+  color: var(--muted);
+}
+
+/* Paragraphs & lists */
+p {
+  margin: 0 0 var(--space-3);
+}
+ul,
+ol {
+  margin: 0 0 var(--space-3) 1.15rem;
+  padding: 0;
+}
+li {
+  margin: 0 0 0.4rem;
+}
+li p {
+  margin: 0;
+} /* compact bullets */
+strong {
+  font-weight: 700;
+}
+em {
+  font-style: italic;
+}
+
+/* Horizontal rule as subtle divider (Markdown ---) */
+hr {
+  border: 0;
+  height: 1px;
+  background: var(--rule);
+  margin: var(--space-6) 0 var(--space-5);
+}
+
+/* Links (kept simple; ATS ignores styling anyway) */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Small, muted metadata (locations, dates) */
+.small,
+time,
+.meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Blocks to keep together across pages (wrap sections in .section if possible) */
+.section {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+/* Job header lines commonly written in Markdown:
      ### Title – Company
      *Location | Dates*  */
-  .role-line {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem .75rem;
-    align-items: baseline;
-  }
-  .role-line .title { font-weight: 700; }
-  .role-line .company { font-weight: 600; }
-  .role-line .spacer { flex: 1 1 auto; }
-  .role-line .meta { white-space: nowrap; }
-  
-  /* Compact “pill” tags for skills (use Markdown lists or backticks; both look fine) */
-  .badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .4rem .5rem;
-    margin: var(--space-2) 0 var(--space-3);
-    padding: 0;
-    list-style: none;
-  }
-  .badges li,
-  .badge {
-    display: inline-block;
-    border: 1px solid var(--rule);
-    padding: .18rem .5rem;
-    border-radius: .5rem;
-    font-size: .95rem;
-    line-height: 1.3;
-    white-space: nowrap;
-  }
-  
-  /* Contact row (render your contact line as a single paragraph with links) */
-  .contact {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .6rem 1rem;
-    margin-bottom: var(--space-5);
-    color: var(--muted);
-  }
-  .contact a { color: inherit; }
-  
-  /* Code/Pre (for tech roles listing stacks or snippets) */
-  code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-    font-size: .95rem;
-    background: #f6f8fa;
-    padding: .1rem .35rem;
-    border-radius: .25rem;
-    border: 1px solid #eaeef2;
-  }
-  pre {
-    background: #f6f8fa;
-    border: 1px solid #eaeef2;
-    border-radius: .4rem;
-    padding: .8rem;
-    overflow: auto;
-    font-size: .95rem;
-  }
-  
-  /* Tables (avoid for ATS; but keep readable if any sneak in) */
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 0 0 var(--space-3);
-  }
-  th, td { border: 1px solid var(--rule); padding: .5rem .6rem; text-align: left; }
-  th { background: #fafafa; }
-  
-  /* Print tweaks */
-  @page {
-    size: A4;
-    margin: 1.6cm;
-  }
-  @media print {
-    html, body {
-      background: #fff;
-      color: #000;
-      font-size: 10.5pt;
-    }
-    a { color: #000; text-decoration: none; }
-    main, .markdown-body {
-      max-width: none;
-      padding: 0;
-    }
-    /* Avoid orphaned headings at page tops */
-    h2, h3, h4 { page-break-after: avoid; break-after: avoid; }
-    p, ul, ol, table, pre { page-break-inside: avoid; }
-    /* Optional: switch to US Letter by uncommenting:
-    @page { size: Letter; margin: 0.75in; }
-    */
-  }
-  
-  /* Accessibility: larger targets on screen; crisp contrast */
-  @media screen {
-    main a { outline-offset: 2px; }
-  }
-  
-  /* Optional: subtle top “name block” if your Markdown starts with H1 + contact line */
-  header.resume-header {
-    margin-bottom: var(--space-5);
-    border-bottom: 2px solid var(--rule);
-    padding-bottom: var(--space-3);
-  }
-  header.resume-header h1 { margin-bottom: var(--space-1); }
-  header.resume-header .contact { margin-bottom: 0; }
-  
-  .onepage {
-    --line: 1.4;
-    --space-1: .18rem;
-    --space-2: .35rem;
-    --space-3: .55rem;
-    --space-4: .8rem;
-    --space-5: 1rem;
-    --space-6: 1.1rem;
-  }
-  .onepage main, .onepage .markdown-body { padding: 1.4rem .9rem 1.6rem; }
-  .onepage h1 { font-size: 1.6rem; }
-  .onepage h2 { font-size: 1.05rem; }
-  .onepage h3 { font-size: .98rem; }
-  .onepage h4 { font-size: .9rem; }
-  .onepage .badges .badge, .onepage .badges li { font-size: .88rem; padding: .12rem .4rem; }
-  .onepage ul, .onepage ol { margin: 0 0 var(--space-2) 1rem; }
-  .onepage .role-line { gap: .35rem .5rem; }
-  .onepage table th, .onepage table td { padding: .35rem .45rem; }
-  
-  /* Print-first compaction */
-  @page { size: A4; margin: 1.2cm; } /* tighten from 1.6cm; switch to Letter if needed */
-  /* @page { size: Letter; margin: 0.6in; } */
-  
-  @media print {
-    html, body {
-      font-size: 9.6pt;       /* was 10.5pt */
-      line-height: 1.38;      /* denser lines */
-    }
-  
-    /* Scale down headings */
-    h1 { font-size: 1.55rem; margin-bottom: .25rem; }
-    h2 { font-size: 1.02rem; margin-top: .9rem; margin-bottom: .4rem; }
-    h3 { font-size: .96rem; margin-top: .6rem; margin-bottom: .25rem; }
-    h4 { font-size: .88rem; margin-top: .45rem; margin-bottom: .2rem; }
-  
-    /* Tighter blocks */
-    p { margin: 0 0 .4rem; }
-    ul, ol { margin: 0 0 .4rem 1rem; }
-    li { margin: 0 0 .25rem; }
-  
-    /* Allow breaking inside text so long bullets/paras don't force overflow */
-    p, ul, ol { page-break-inside: auto; break-inside: auto; }
-    /* Keep only truly blocky things together */
-    table, pre, header.resume-header { page-break-inside: avoid; }
-  
-    /* Compact badges/tags */
-    .badges { gap: .25rem .35rem; margin: .25rem 0 .4rem; }
-    .badges li, .badge {
-      font-size: .88rem;
-      padding: .12rem .38rem;
-      border-radius: .35rem;
-    }
-  
-    /* Compact contact row and header */
-    .contact { gap: .4rem .6rem; margin-bottom: .6rem; }
-    header.resume-header { margin-bottom: .8rem; padding-bottom: .5rem; border-bottom-width: 1px; }
-  
-    /* Code & tables smaller */
-    code, pre { font-size: .88rem; }
-    pre { padding: .5rem; }
-    th, td { padding: .35rem .45rem; }
-  
-    /* Let the layout use full width when printing */
-    main, .markdown-body { max-width: none; padding: 0; }
-  
-    /* Hyphenation helps squeeze lines a bit */
-    p, li { hyphens: auto; -webkit-hyphens: auto; }
-  }
-  
-  /* Micro trims that often save ~1–2 lines */
-  .role-line .meta { font-size: .9rem; }
-  .small, time, .meta { font-size: .9rem; }
+.role-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: baseline;
+}
+.role-line .title {
+  font-weight: 700;
+}
+.role-line .company {
+  font-weight: 600;
+}
+.role-line .spacer {
+  flex: 1 1 auto;
+}
+.role-line .meta {
+  white-space: nowrap;
+}
 
-  /* ===== Compact print layout for 1-page resume ===== */
+/* Compact “pill” tags for skills (use Markdown lists or backticks; both look fine) */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.5rem;
+  margin: var(--space-2) 0 var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+.badges li,
+.badge {
+  display: inline-block;
+  border: 1px solid var(--rule);
+  padding: 0.18rem 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  white-space: nowrap;
+}
 
-@page { 
-  size: A4; 
+/* Code/Pre (for tech roles listing stacks or snippets) */
+code {
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.95rem;
+  background: #f6f8fa;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  border: 1px solid #eaeef2;
+}
+pre {
+  background: #f6f8fa;
+  border: 1px solid #eaeef2;
+  border-radius: 0.4rem;
+  padding: 0.8rem;
+  overflow: auto;
+  font-size: 0.95rem;
+}
+
+/* Tables (avoid for ATS; but keep readable if any sneak in) */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 var(--space-3);
+}
+th,
+td {
+  border: 1px solid var(--rule);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+}
+th {
+  background: #fafafa;
+}
+
+/* Accessibility: larger targets on screen; crisp contrast */
+@media screen {
+  main a {
+    outline-offset: 2px;
+  }
+}
+
+/* Optional: subtle top “name block” if your Markdown starts with H1 + contact line */
+header.resume-header {
+  margin-bottom: var(--space-5);
+  border-bottom: 2px solid var(--rule);
+  padding-bottom: var(--space-3);
+}
+header.resume-header h1 {
+  margin-bottom: var(--space-1);
+}
+header.resume-header .contact {
+  margin-bottom: 0;
+}
+
+.onepage {
+  --line: 1.4;
+  --space-1: 0.18rem;
+  --space-2: 0.35rem;
+  --space-3: 0.55rem;
+  --space-4: 0.8rem;
+  --space-5: 1rem;
+  --space-6: 1.1rem;
+}
+.onepage main,
+.onepage .markdown-body {
+  padding: 1.4rem 0.9rem 1.6rem;
+}
+.onepage h1 {
+  font-size: 1.6rem;
+}
+.onepage h2 {
+  font-size: 1.05rem;
+}
+.onepage h3 {
+  font-size: 0.98rem;
+}
+.onepage h4 {
+  font-size: 0.9rem;
+}
+.onepage .badges .badge,
+.onepage .badges li {
+  font-size: 0.88rem;
+  padding: 0.12rem 0.4rem;
+}
+.onepage ul,
+.onepage ol {
+  margin: 0 0 var(--space-2) 1rem;
+}
+.onepage .role-line {
+  gap: 0.35rem 0.5rem;
+}
+.onepage table th,
+.onepage table td {
+  padding: 0.35rem 0.45rem;
+}
+
+/* Compact print layout for 1-page resume */
+@page {
+  size: A4;
   margin: 1.2cm; /* tighter than 1.6cm */
 }
 
 @media print {
-  html, body {
+  html,
+  body {
     font-size: 9.5pt; /* smaller text for compactness */
     line-height: 1.38;
   }
 
-  h1 { font-size: 1.6rem; margin-bottom: 0.2rem; }
-  h2 { font-size: 1.05rem; margin-top: 0.8rem; margin-bottom: 0.35rem; }
-  h3 { font-size: 0.95rem; margin-top: 0.5rem; margin-bottom: 0.2rem; }
-  h4 { font-size: 0.88rem; margin-top: 0.4rem; margin-bottom: 0.15rem; }
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.2rem;
+  }
+  h2 {
+    font-size: 1.05rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.35rem;
+  }
+  h3 {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  h4 {
+    font-size: 0.88rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.15rem;
+  }
 
-  p { margin: 0 0 0.35rem; }
-  ul, ol { margin: 0 0 0.35rem 1rem; }
-  li { margin: 0 0 0.25rem; }
+  p {
+    margin: 0 0 0.35rem;
+  }
+  ul,
+  ol {
+    margin: 0 0 0.35rem 1rem;
+  }
+  li {
+    margin: 0 0 0.25rem;
+  }
 
   /* Let paragraphs and lists break to avoid large gaps */
-  p, ul, ol { page-break-inside: auto; break-inside: auto; }
+  p,
+  ul,
+  ol {
+    page-break-inside: auto;
+    break-inside: auto;
+  }
 
   /* Compact skill badges */
-  .badges { gap: 0.25rem 0.35rem; margin: 0.2rem 0 0.35rem; }
-  .badges li, .badge {
+  .badges {
+    gap: 0.25rem 0.35rem;
+    margin: 0.2rem 0 0.35rem;
+  }
+  .badges li,
+  .badge {
     font-size: 0.88rem;
     padding: 0.12rem 0.38rem;
     border-radius: 0.35rem;
   }
 
   /* Reduce header spacing */
-  header.resume-header { 
-    margin-bottom: 0.8rem; 
-    padding-bottom: 0.5rem; 
-    border-bottom-width: 1px; 
+  header.resume-header {
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom-width: 1px;
   }
 
-  .contact { gap: 0.4rem 0.6rem; margin-bottom: 0.6rem; }
-  .small, time, .meta { font-size: 0.9rem; }
+  .contact {
+    gap: 0.4rem 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+  .small,
+  time,
+  .meta {
+    font-size: 0.9rem;
+  }
 
   /* Make full use of page width */
-  main, .markdown-body { 
-    max-width: none; 
-    padding: 0; 
+  main,
+  .markdown-body {
+    max-width: none;
+    padding: 0;
   }
 
   /* Enable hyphenation for tighter wrapping */
-  p, li { hyphens: auto; -webkit-hyphens: auto; }
+  p,
+  li {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+}
+
+/* Micro trims that often save ~1–2 lines */
+.role-line .meta {
+  font-size: 0.9rem;
+}
+.small,
+time,
+.meta {
+  font-size: 0.9rem;
 }
 
 /* Contact section in horizontal row */
@@ -358,7 +399,8 @@
   list-style: none;
   color: var(--muted);
 }
-.contact span, .contact a {
+.contact span,
+.contact a {
   white-space: nowrap;
   color: inherit;
   text-decoration: none;
