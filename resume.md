@@ -1,13 +1,28 @@
 # Bhagavathi Ravitej
-**Software Developer**
+**Backend Developer**
 
-Email: bhagavathi.ravitej@gmail.com | Phone: (+47) 93 08 36 41 | Location: Ålesund 6015 | LinkedIn: https://www.linkedin.com/in/ravitej-bhagavathi/
+- bhagavathi.ravitej@gmail.com
+- (+47) 93 08 36 41
+- Ålesund 6015
+- [LinkedIn](https://www.linkedin.com/in/ravitej-bhagavathi/)
 
 ---
 
 ## Professional Summary
 
 Java developer with 3 years’ experience delivering real-time motion simulation software for offshore renewable energy projects. Proficient in Java back-end development, supported by disciplined testing and CI/CD. Passionate about building software focused on environmental sustainability.
+
+---
+
+## Skills
+
+- Java
+- C#
+- Python
+- JavaScript
+- Maven/Gradle
+- Docker
+- GitHub Actions
 
 ---
 
@@ -29,14 +44,6 @@ Java developer with 3 years’ experience delivering real-time motion simulation
 
 ---
 
-## Skills
-
-**Languages:** Java, C#, Python, JavaScript  
-**Frameworks & Libraries:** JUnit, Maven/Gradle  
-**Cloud & DevOps:** Docker, GitHub Actions  
-
----
-
 ## Education
 
 ### Master of Science in Simulation and Visualization
@@ -48,8 +55,3 @@ Java developer with 3 years’ experience delivering real-time motion simulation
 **Indian Institute of Technology, Madras** | *2015*
 
 - Thesis in "Finite Element Analysis of an Anchor Handling Tug and Supply Vessel"
-
-
----
-
-*Keywords: [Java, Backend development, CI/CD]*
