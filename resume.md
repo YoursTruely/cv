@@ -56,3 +56,8 @@ Java developer with 3 years’ experience delivering real-time motion simulation
 **Indian Institute of Technology, Madras** | *2015*
 
 - Thesis in "Finite Element Analysis of an Anchor Handling Tug and Supply Vessel"
+
+## Languages
+
+- English (Advanced - C1)
+- Norwegian (Intermediate - B1)
