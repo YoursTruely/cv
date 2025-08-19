@@ -6,6 +6,12 @@
    - Avoids icons, tables, text-in-images
    ============ */
 
+/*
+  GLOBAL VARIABLES
+  ----------------
+  Define color, spacing, and font variables for consistent styling.
+*/
+
 :root {
   --fg: #111;
   --muted: #555;
@@ -25,6 +31,12 @@
 * {
   box-sizing: border-box;
 }
+
+/*
+  BASE STYLES
+  -----------
+  Set up default font, background, and color for the resume.
+*/
 
 html,
 body {
@@ -55,6 +67,12 @@ main,
   padding: 2rem 1.2rem 3rem;
 }
 
+/*
+  HEADINGS
+  --------
+  Style for h1-h4 headings, including section spacing and appearance.
+*/
+
 /* Headings */
 h1,
 h2,
@@ -74,7 +92,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: var(--muted);
-  margin-top: var(--space-6);
+  margin-top: 5rem; /* Increased space before each section */
   margin-bottom: var(--space-3);
   border-bottom: 1px solid var(--rule);
   padding-bottom: var(--space-2);
@@ -113,6 +131,12 @@ em {
   font-style: italic;
 }
 
+/*
+  DIVIDERS & LINKS
+  ----------------
+  Style for horizontal rules and links.
+*/
+
 /* Horizontal rule as subtle divider (Markdown ---) */
 hr {
   border: 0;
@@ -130,6 +154,12 @@ a:hover {
   text-decoration: underline;
 }
 
+/*
+  METADATA & SECTIONS
+  -------------------
+  Style for small text, dates, and section wrappers.
+*/
+
 /* Small, muted metadata (locations, dates) */
 .small,
 time,
@@ -143,6 +173,12 @@ time,
   break-inside: avoid;
   page-break-inside: avoid;
 }
+
+/*
+  JOB HEADER LINES
+  ----------------
+  Flexbox layout for job title, company, and dates.
+*/
 
 /* Job header lines commonly written in Markdown:
      ### Title – Company
@@ -165,6 +201,12 @@ time,
 .role-line .meta {
   white-space: nowrap;
 }
+
+/*
+  SKILLS BADGES
+  -------------
+  Style for skills section pills and badges.
+*/
 
 /* Compact “pill” tags for skills (use Markdown lists or backticks; both look fine) */
 .badges {
@@ -205,6 +247,12 @@ pre {
   font-size: 0.95rem;
 }
 
+/*
+  TABLES
+  ------
+  Basic table styling for readability.
+*/
+
 /* Tables (avoid for ATS; but keep readable if any sneak in) */
 table {
   border-collapse: collapse;
@@ -220,6 +268,12 @@ td {
 th {
   background: #fafafa;
 }
+
+/*
+  ACCESSIBILITY & MEDIA QUERIES
+  ----------------------------
+  Improve accessibility and print layout.
+*/
 
 /* Accessibility: larger targets on screen; crisp contrast */
 @media screen {
@@ -241,6 +295,12 @@ header.resume-header .contact {
   margin-bottom: 0;
 }
 
+/*
+  ONEPAGE LAYOUT
+  --------------
+  Compact layout for single-page resumes.
+*/
+
 .onepage {
   --line: 1.4;
   --space-1: 0.18rem;
@@ -259,6 +319,7 @@ header.resume-header .contact {
 }
 .onepage h2 {
   font-size: 1.05rem;
+  margin-top: 5rem;
 }
 .onepage h3 {
   font-size: 0.98rem;
@@ -282,6 +343,12 @@ header.resume-header .contact {
 .onepage table td {
   padding: 0.35rem 0.45rem;
 }
+
+/*
+  PRINT LAYOUT
+  ------------
+  Adjustments for printing resumes.
+*/
 
 /* Compact print layout for 1-page resume */
 @page {
@@ -379,6 +446,12 @@ header.resume-header .contact {
   }
 }
 
+/*
+  MICRO TRIMS
+  -----------
+  Small adjustments to save space.
+*/
+
 /* Micro trims that often save ~1–2 lines */
 .role-line .meta {
   font-size: 0.9rem;
@@ -388,6 +461,12 @@ time,
 .meta {
   font-size: 0.9rem;
 }
+
+/*
+  CONTACT SECTION
+  ---------------
+  Grid layout for contact details.
+*/
 
 /* Contact section in horizontal row */
 .contact {
@@ -406,6 +485,12 @@ time,
   text-decoration: none;
 }
 
+/*
+  SKILLS GRID
+  -----------
+  Grid layout for skills section.
+*/
+
 /* Skills grid: 2 rows × 4 columns */
 .skills-grid {
   display: grid;
@@ -415,7 +500,6 @@ time,
 }
 .skills-grid span {
   display: inline-block;
-  border: 1px solid var(--rule);
   padding: 0.18rem 0.5rem;
   border-radius: 0.5rem;
   font-size: 0.95rem;

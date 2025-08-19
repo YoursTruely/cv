@@ -8,13 +8,11 @@
   <a href="https://www.linkedin.com/in/ravitej-bhagavathi/">LinkedIn</a>
 </div>
 
----
 
 ## Professional Summary
 
 Java developer with 3 years’ experience delivering real-time motion simulation software for offshore renewable energy projects. Proficient in Java back-end development, supported by disciplined testing and CI/CD. Passionate about building software focused on environmental sustainability.
 
----
 
 ## Skills
 
@@ -29,7 +27,6 @@ Java developer with 3 years’ experience delivering real-time motion simulation
   <span>CI/CD</span>
 </div>
 
----
 
 ## Professional Experience
 
@@ -47,7 +44,6 @@ Java developer with 3 years’ experience delivering real-time motion simulation
 - Facilitated the classification and certification of marine structures by verifying their structural integrity in compliance with Class Rules, Statutory Regulations and International Standards 
 - Provided technical support in developing in-house software for automatic rule compliance verification. Tested and validated the software against functional requirements
 
----
 
 ## Education
 
