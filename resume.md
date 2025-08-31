@@ -1,30 +1,23 @@
-# Bhagavathi Ravitej
-**Backend Developer**
+# Ravitej Bhagavathi
 
 <div class="contact">
   <span>bhagavathi.ravitej@gmail.com</span>
-  <span>(+47) 93 08 36 41</span>
-  <span>Ålesund 6015</span>
+  <span>(+47) 92 08 36 41</span>
+  <span>Ålesund 6007</span>
   <a href="https://www.linkedin.com/in/ravitej-bhagavathi/">LinkedIn</a>
 </div>
-
-
-## Professional Summary
-
-Java developer with 3 years’ experience delivering real-time motion simulation software for offshore renewable energy projects. Proficient in Java back-end development, supported by disciplined testing and CI/CD. Passionate about building software focused on environmental sustainability.
-
 
 ## Skills
 
 <div class="skills-grid">
+  <span>Control Systems & Cybernetics</span>
   <span>Java</span>
-  <span>C#</span>
   <span>Python</span>
-  <span>JavaScript</span>
-  <span>Maven/Gradle</span>
-  <span>Docker</span>
-  <span>GitHub Actions</span>
-  <span>CI/CD</span>
+  <span>Matlab/Simulink</span>
+  <span>Marine Systems Knowledge</span>
+  <span>C/C++</span>
+  <span>Git</span>
+  <span>Modeling & Simulation</span>
 </div>
 
 
@@ -33,16 +26,12 @@ Java developer with 3 years’ experience delivering real-time motion simulation
 ### Simulation Engineer
 **OSC AS** | *Aug 2022 – Present*
 
-- Build real-time marine simulation software for virtual prototyping and operator training, combining physics, high-fidelity 3D visualization, and intuitive UIs across marine and offshore wind projects.
-- Turn requirements into robust simulation models and custom motion logic, using a Java backend integrating physics engines and 3D graphics.
-- Manage DevOps and CI/CD with GitHub Actions, Git version control, Artifactory packages, and Jira.
-- Partner with PM and core dev teams to plan and deliver projects. Interface with customers and sales to align technical solutions.
-
-### Design Appraisal Engineer
-**Indian Register of Shipping** | *Jul 2015 – July 2020*
-
-- Facilitated the classification and certification of marine structures by verifying their structural integrity in compliance with Class Rules, Statutory Regulations and International Standards 
-- Provided technical support in developing in-house software for automatic rule compliance verification. Tested and validated the software against functional requirements
+- Build real-time marine simulation software for virtual prototyping and operator training, combining multi-body physics, high-fidelity 3D visualization, and intuitive HMIs in a variety of marine, subsea, and offshore wind projects.
+- Develop and maintain advanced control systems for vessels and onboard equipment, such as cranes, pile grippers, mooring winches, heave compensation systems, and other specialized tools.
+- Collaborate with project management and core development teams to plan and deliver projects. Liaise with customers and the sales team to align technical solutions with client needs.
+#### Selected Projects ####
+- **Motion Compensated Pile Gripper:** As the lead developer, I engineered the control system for a motion-compensated pile gripper on an offshore wind installation vessel. This system facilitates precise monopile installations under stringent tolerance requirements.
+- **Dynamic Positioning System:** I updated and tuned our in-house DP system to improve its interaction with the Motion-Compensated Pile Gripper, enhancing overall system stability and performance.
 
 
 ## Education
@@ -50,14 +39,17 @@ Java developer with 3 years’ experience delivering real-time motion simulation
 ### Master of Science in Simulation and Visualization
 **NTNU - Ålesund** | *2022*
 
-- Thesis in "Predictive Digital Twin of an Unmanned Surface Vehicle"
+**Thesis: Predictive Digital Twin of an Unmanned Surface Vehicle** in collaboration with Maritime Robotics AS
+- Developed a predictive digital twin for Otter USV to perform real-world actuator fault diagnosis.
+- Implemented and validated an Adaptive Extended Kalman Filter (AEKF) with data from physical sea trials, successfully identifying an 18% performance fault in one of the thrusters after introducing a custom-designed, 3D-printed broken propeller.
+- Processed raw GNSS sensor data, leveraging the USV's kinematic and kinetic models to isolate thruster-specific faults and calibrate the twin for future state prediction with high accuracy (<4% RMSE for key variables).
 
-### Bachelor of Technology in Naval Architecture and Ocean Engineering
-**Indian Institute of Technology, Madras** | *2015*
+## Publications
+- R. Bhagavathi, D. K. M. Kufoalor and A. Hasan, "Digital Twin-Driven Fault Diagnosis for Autonomous Surface Vehicles," in IEEE Access, vol. 11, pp. 41096-41104, 2023.
 
-- Thesis in "Finite Element Analysis of an Anchor Handling Tug and Supply Vessel"
+## Affiliations
+- Member of International Society of Automation (ISA)
 
 ## Languages
-
-- English (Advanced - C1)
-- Norwegian (Intermediate - B1)
+- English (Advanced C2)
+- Norwegian (Intermediate B1)

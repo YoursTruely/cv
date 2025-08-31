@@ -82,10 +82,11 @@ h4 {
   font-weight: 700;
 }
 h1 {
-  font-size: 24pt;
+  font-size: 25pt;
   letter-spacing: 0.2px;
   margin-bottom: var(--space-2);
   color: var(--accent); /* Accent color for main heading */
+  text-align: center; /* center the main header */
 }
 h2 {
   font-size: 16pt;
@@ -334,7 +335,7 @@ header.resume-header h1 {
   font-size: 1.27rem;
 }
 .onepage h4 {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .onepage .badges .badge,
 .onepage .badges li {
@@ -362,7 +363,7 @@ header.resume-header h1 {
 /* Compact print layout for 1-page resume */
 @page {
   size: A4;
-  margin: 1.2cm; /* tighter than 1.6cm */
+  margin: 1.2cm 1.2cm 0.6cm;
 }
 
 @media print {
@@ -387,7 +388,7 @@ header.resume-header h1 {
     margin-bottom: 0.2rem;
   }
   h4 {
-    font-size: 0.88rem;
+    font-size: 1rem;
     margin-top: 0.4rem;
     margin-bottom: 0.15rem;
   }
@@ -488,6 +489,9 @@ time,
   color: var(--muted);
   background: #eaf0fa; /* Soft accent background for contact */
   border-radius: 0.5rem;
+  justify-content: space-evenly; /* spread items evenly */
+  justify-items: center;   /* center items within their cells */
+  text-align: center;      /* center text within items */
 }
 .contact span,
 .contact a {
@@ -505,20 +509,28 @@ time,
 /* Skills grid: 2 rows × 4 columns */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr); /* exactly 4 */
+  justify-content: center; /* center the grid block within its container */
   gap: 0.6rem 1.2rem;
-  margin: var(--space-2) 0 var(--space-3);
+  max-width: 760px;
+  margin: var(--space-2) auto var(--space-3);
+  justify-items: center;
   background: #eaf0fa;
   border-radius: 0.7rem;
   padding: 1rem 0.5rem;
 }
+
 .skills-grid span {
-  display: inline-block;
-  padding: 0.18rem 0.5rem;
+  display: block;                       /* block is enough since width:100% */
+  width: 100%;                          /* each badge fills its grid cell */
+  padding: 0.2rem 0.5rem;
+  margin: 0.1rem;
   border-radius: 0.5rem;
   font-size: 10pt;
   text-align: center;
-  color: var(--fg);
+  color: var(--muted);
   font-weight: 400;
-  margin: 0.15rem 0.1rem;
+  box-sizing: border-box;
 }
+
+
