@@ -30,8 +30,8 @@
 - Develop and maintain advanced control systems for vessels and onboard equipment, such as cranes, pile grippers, mooring winches, heave compensation systems, and other specialized tools.
 - Collaborate with project management and core development teams to plan and deliver projects. Liaise with customers and the sales team to align technical solutions with client needs.
 #### Selected Projects ####
-- **Motion Compensated Pile Gripper:** As the lead developer, I engineered the control system for a motion-compensated pile gripper on an offshore wind installation vessel. This system facilitates precise monopile installations under stringent tolerance requirements.
-- **Dynamic Positioning System:** I updated and tuned our in-house DP system to improve its interaction with the Motion-Compensated Pile Gripper, enhancing overall system stability and performance.
+- **Motion Compensated Pile Gripper:** Led the development of the control system for a motion-compensated pile gripper on an offshore wind installation vessel, facilitating precise monopile installations under stringent tolerance requirements.
+- **Dynamic Positioning System:** Updated and tuned the in-house DP system to improve interaction with the Motion-Compensated Pile Gripper, enhancing overall system stability and performance.
 
 
 ## Education
@@ -40,7 +40,7 @@
 **NTNU - Ålesund** | *2022*
 
 **Thesis: Predictive Digital Twin of an Unmanned Surface Vehicle** in collaboration with Maritime Robotics AS
-- Developed a predictive digital twin for Otter USV to perform real-world actuator fault diagnosis.
+- Developed a predictive digital twin for the Otter USV, enabling real-world actuator fault diagnosis.
 - Implemented and validated an Adaptive Extended Kalman Filter (AEKF) with data from physical sea trials, successfully identifying an 18% performance fault in one of the thrusters after introducing a custom-designed, 3D-printed broken propeller.
 - Processed raw GNSS sensor data, leveraging the USV's kinematic and kinetic models to isolate thruster-specific faults and calibrate the twin for future state prediction with high accuracy (<4% RMSE for key variables).
 
